@@ -21,7 +21,7 @@ class TriviaGame:
     def __init__(self, root):
         self.root = root
         self.root.title("Bible Trivia Game")
-        self.root.geometry("1024x600")
+        self.root.geometry()
         self.question_index = 0
 
         self.question_label = tk.Label(root, text=questions[self.question_index][0], wraplength=800, font=("Arial", 16))
