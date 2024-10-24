@@ -1,0 +1,155 @@
+{
+    "Romans Road": [
+        {
+            "question": "What is our universal condition according to Romans 3:23?",
+            "answer": "For all have sinned and fall short of the glory of God.",
+            "reference": "Romans 3:23",
+            "weight": 1
+        },
+        {
+            "question": "What is the consequence of sin mentioned in Romans 6:23?",
+            "answer": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+            "reference": "Romans 6:23",
+            "weight": 1
+        },
+        {
+            "question": "How does God's love manifest according to Romans 5:8?",
+            "answer": "But God demonstrates His own love for us in this: While we were still sinners, Christ died for us.",
+            "reference": "Romans 5:8",
+            "weight": 1
+        },
+        {
+            "question": "What does Romans 10:9 say about confessing Jesus as Lord?",
+            "answer": "If you declare with your mouth, \"Jesus is Lord,\" and believe in your heart that God raised him from the dead, you will be saved.",
+            "reference": "Romans 10:9",
+            "weight": 1
+        },
+        {
+            "question": "What does Romans 10:13 say about calling on the name of the Lord?",
+            "answer": "Everyone who calls on the name of the Lord will be saved.",
+            "reference": "Romans 10:13",
+            "weight": 1
+        },
+        {
+            "question": "According to Romans 5:1, what do we gain through faith?",
+            "answer": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ.",
+            "reference": "Romans 5:1",
+            "weight": 2
+        },
+        {
+            "question": "What does Romans 8:1 assure believers?",
+            "answer": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
+            "reference": "Romans 8:1",
+            "weight": 2
+        },
+        {
+            "question": "How does Romans 8:38-39 describe God's love?",
+            "answer": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+            "reference": "Romans 8:38-39",
+            "weight": 3
+        },
+        {
+            "question": "What is the promise in Romans 8:28?",
+            "answer": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+            "reference": "Romans 8:28",
+            "weight": 3
+        },
+        {
+            "question": "What is the hope mentioned in Romans 15:13?",
+            "answer": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
+            "reference": "Romans 15:13",
+            "weight": 5
+        },
+        {
+            "question": "According to Romans 12:1, how should believers live?",
+            "answer": "Therefore, I urge you, brothers and sisters, in view of God\\'s mercy, to offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship.",
+            "reference": "Romans 12:1",
+            "weight": 5
+        },
+        {
+            "question": "What guidance does Romans 12:2 give for transformation?",
+            "answer": "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is—his good, pleasing and perfect will.",
+            "reference": "Romans 12:2",
+            "weight": 5
+        },
+        {
+            "question": "What does Romans 1:16 say about the gospel?",
+            "answer": "For I am not ashamed of the gospel, because it is the power of God that brings salvation to everyone who believes.",
+            "reference": "Romans 1:16",
+            "weight": 5
+        },
+        {
+            "question": "What does Romans 12:21 say about overcoming evil?",
+            "answer": "Do not be overcome by evil, but overcome evil with good.",
+            "reference": "Romans 12:21",
+            "weight": 5
+        },
+        {
+            "question": "What does Romans 13:8 say about love?",
+            "answer": "Let no debt remain outstanding, except the continuing debt to love one another, for whoever loves others has fulfilled the law.",
+            "reference": "Romans 13:8",
+            "weight": 10
+        },
+        {
+            "question": "What does Romans 13:14 say about living in the light?",
+            "answer": "Rather, clothe yourselves with the Lord Jesus Christ, and do not think about how to gratify the desires of the flesh.",
+            "reference": "Romans 13:14",
+            "weight": 10
+        },
+        {
+            "question": "What does Romans 14:13 say about judging others?",
+            "answer": "Therefore let us stop passing judgment on one another. Instead, make up your mind not to put any stumbling block or obstacle in the way of a brother or sister.",
+            "reference": "Romans 14:13",
+            "weight": 15
+        },
+        {
+            "question": "What does Romans 14:19 say about unity?",
+            "answer": "Let us therefore make every effort to do what leads to peace and to mutual edification.",
+            "reference": "Romans 14:19",
+            "weight": 15
+        },
+        {
+            "question": "What does Romans 15:7 say about acceptance?",
+            "answer": "Accept one another, then, just as Christ accepted you, in order to bring praise to God.",
+            "reference": "Romans 15:7",
+            "weight": 20
+        },
+        {
+            "question": "What does Romans 15:20 say about sharing the gospel?",
+            "answer": "It has always been my ambition to preach the gospel where Christ was not known, so that I would not be building on someone else's foundation.",
+            "reference": "Romans 15:20",
+            "weight": 20
+        },
+        {
+            "question": "What does Romans 15:30 say about prayer?",
+            "answer": "I urge you, brothers and sisters, by our Lord Jesus Christ and by the love of the Spirit, to join me in my struggle by praying to God for me.",
+            "reference": "Romans 15:30",
+            "weight": 20
+        },
+        {
+            "question": "What does Romans 16:17 say about division?",
+            "answer": "I urge you, brothers and sisters, to watch out for those who cause divisions and put obstacles in your way that are contrary to the teaching you have learned. Keep away from them.",
+            "reference": "Romans 16:17",
+            "weight": 25
+        },
+        {
+            "question": "What does Romans 16:19 say about wisdom?",
+            "answer": "Everyone has heard about your obedience, so I rejoice because of you; but I want you to be wise about what is good, and innocent about what is evil.",
+            "reference": "Romans 16:19",
+            "weight": 25
+        },
+        {
+            "question": "What does Romans 16:20 say about Satan?",
+            "answer": "The God of peace will soon crush Satan under your feet. The grace of our Lord Jesus be with you.",
+            "reference": "Romans 16:20",
+            "weight": 25
+        },
+        {
+            "question": "What does Romans 16:25 say about the gospel?",
+            "answer": "Now to him who is able to establish you in accordance with my gospel, the message I proclaim about Jesus Christ, in keeping with the revelation of the mystery hidden for long ages past.",
+            "reference": "Romans 16:25",
+            "weight": 25
+        }
+        
+    ]
+}
