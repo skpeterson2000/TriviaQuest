@@ -1,0 +1,78 @@
+{
+    "category": "Romans Road",
+    "level": 2,
+    "questions": [
+        {
+            "question": "What is our universal condition according to Romans 3:23?",
+            "answer": "For all have sinned and fall short of the glory of God.",
+            "reference": "Romans 3:23",
+            "weight": 1
+        },
+        {
+            "question": "What is the consequence of sin mentioned in Romans 6:23?",
+            "answer": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+            "reference": "Romans 6:23",
+            "weight": 1
+        },
+        {
+            "question": "How does God's love manifest according to Romans 5:8?",
+            "answer": "But God demonstrates His own love for us in this: While we were still sinners, Christ died for us.",
+            "reference": "Romans 5:8",
+            "weight": 1
+        },
+        {
+            "question": "What does Romans 10:9 say about confessing Jesus as Lord?",
+            "answer": "If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved.",
+            "reference": "Romans 10:9",
+            "weight": 1
+        },
+        {
+            "question": "What does Romans 10:13 say about calling on the name of the Lord?",
+            "answer": "Everyone who calls on the name of the Lord will be saved.",
+            "reference": "Romans 10:13",
+            "weight": 1
+        },
+        {
+            "question": "According to Romans 5:1, what do we gain through faith?",
+            "answer": "Therefore, since we have been justified through faith, we have peace with God through our Lord Jesus Christ.",
+            "reference": "Romans 5:1",
+            "weight": 2
+        },
+        {
+            "question": "What does Romans 8:1 assure believers?",
+            "answer": "Therefore, there is now no condemnation for those who are in Christ Jesus.",
+            "reference": "Romans 8:1",
+            "weight": 2
+        },
+        {
+            "question": "How does Romans 8:38-39 describe God's love?",
+            "answer": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+            "reference": "Romans 8:38-39",
+            "weight": 3
+        },
+        {
+            "question": "What is the promise in Romans 8:28?",
+            "answer": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+            "reference": "Romans 8:28",
+            "weight": 3
+        },
+        {
+            "question": "What is the hope mentioned in Romans 15:13?",
+            "answer": "May the God of hope fill you with all joy and peace as you trust in him, so that you may overflow with hope by the power of the Holy Spirit.",
+            "reference": "Romans 15:13",
+            "weight": 5
+        },
+        {
+            "question": "According to Romans 12:1, how should believers live?",
+            "answer": "Therefore, I urge you, brothers and sisters, in view of God's mercy, to offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship.",
+            "reference": "Romans 12:1",
+            "weight": 5
+        },
+        {
+            "question": "What guidance does Romans 12:2 give for transformation?",
+            "answer": "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God's will is—his good, pleasing and perfect will.",
+            "reference": "Romans 12:2",
+            "weight": 5
+        }
+    ]
+}

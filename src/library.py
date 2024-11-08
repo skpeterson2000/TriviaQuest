@@ -1,5 +1,5 @@
 import tkinter as tk
-from main import main as start_romans_road
+# from main import main as start_romans_road
 
 def start_category(category):
     print(f"Starting category: {category}")  # Placeholder for other categories
@@ -23,8 +23,8 @@ categories = [
     "Faith Heroes",
     "Old Testament",
     "New Testament",
-    "Parables",
-    "Miracles of Jesus",
+    "God used men",
+    "Jesus",
     "Commandments",
     "Psalms",
     "Proverbs",

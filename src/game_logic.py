@@ -45,7 +45,7 @@ class TriviaGame:
         self.load_question()
 
     def load_questions(self):
-        with open('data/romans_road.json', 'r') as file:
+        with open('/home/pi/Prepared4Eternity/data/romans_road.json', 'r') as file:
             self.questions = json.load(file)["Romans Road"]  # Load only Romans Road questions
 
     def load_question(self):
@@ -67,7 +67,6 @@ class TriviaGame:
                 button.config(text=answers[i], value=answers[i])
         else:
             self.show_leaderboard()
-
     def check_answer(self):
         selected_answer = self.answer_var.get()
         current_question = self.questions[self.question_index]
@@ -106,18 +105,15 @@ class TriviaGame:
         self.feedback_label.config(text=f"Final Score: {round(self.score, 2)}\nTotal Time: {total_time} seconds")
         self.save_score(total_time)
 
-        # Clear the content frame for the leaderboard
         for widget in self.content_frame.winfo_children():
             widget.pack_forget()
 
-        # Load existing scores
         try:
-            with open('leaderboard.json', 'r') as file:
+            with open('/home/pi/Prepared4Eternity/data/leaderboard.json', 'r') as file:
                 leaderboard = json.load(file)
         except FileNotFoundError:
             leaderboard = []
 
-        # Display the leaderboard
         leaderboard_label = tk.Label(self.content_frame, text="Top Scores", font=("Arial", 16), bg='white', wraplength=950)
         leaderboard_label.pack(pady=10)
 
@@ -125,11 +121,9 @@ class TriviaGame:
             entry_label = tk.Label(self.content_frame, text=f"{entry['name']}: {entry['score']} (Time: {entry.get('time', 'N/A')} seconds)", font=("Arial", 14), bg='white', wraplength=950)
             entry_label.pack()
 
-        # Button to return to Home
         home_button = tk.Button(self.content_frame, text="Return to Home", command=self.return_to_home, font=("Arial", 14))
         home_button.pack(pady=10)
 
-        # Exit button
         exit_button = tk.Button(self.content_frame, text="Exit Game", command=self.root.quit, font=("Arial", 14))
         exit_button.pack(pady=10)
 
@@ -140,22 +134,18 @@ class TriviaGame:
         main.main()
 
     def save_score(self, total_time):
-        # Load existing scores
         try:
-            with open('leaderboard.json', 'r') as file:
+            with open('/home/pi/Prepared4Eternity/data/leaderboard.json', 'r') as file:
                 leaderboard = json.load(file)
         except FileNotFoundError:
             leaderboard = []
 
-        # Get the player's name and score
         player_name = self.ask_player_name()
         leaderboard.append({'name': player_name, 'score': round(self.score, 2), 'time': total_time})
                             
-        # Sort the leaderboard by score
         leaderboard.sort(key=lambda x: x['score'], reverse=True)
 
-        # Save the updated leaderboard
-        with open('leaderboard.json', 'w') as file:
+        with open('/home/pi/Prepared4Eternity/data/leaderboard.json', 'w') as file:
             json.dump(leaderboard, file, indent=4)
 
     def ask_player_name(self):
@@ -171,4 +161,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     game = TriviaGame(root)
     game.run()
-

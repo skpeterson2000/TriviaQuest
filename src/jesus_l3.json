@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "question": "Where is the Parable of the Sower found, which explains why Jesus spoke in parables and illustrates different responses to the Word of God?",
+      "answer": "Matthew 13:1-23",
+      "reference": "Matthew 13:1-23",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Mustard Seed, describing the kingdom of heaven as a small seed that grows into a large tree?",
+      "answer": "Matthew 13:31-32",
+      "reference": "Matthew 13:31-32",
+      "weight": 3
+    },
+    {
+      "question": "Where can we find the Parable of the Lost Sheep, which tells of a shepherd leaving ninety-nine sheep to find the one that is lost?",
+      "answer": "Luke 15:1-7",
+      "reference": "Luke 15:1-7",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Hidden Treasure, involving a man who finds a hidden treasure in a field and sells everything he has to buy that field?",
+      "answer": "Matthew 13:44",
+      "reference": "Matthew 13:44",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Prodigal Son, featuring a father who welcomes his wayward son back home?",
+      "answer": "Luke 15:11-32",
+      "reference": "Luke 15:11-32",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Unforgiving Servant, emphasizing the importance of forgiveness through a king settling accounts with his servants?",
+      "answer": "Matthew 18:21-35",
+      "reference": "Matthew 18:21-35",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Net, likening the kingdom of heaven to a net that catches all kinds of fish, which are then sorted by the fishermen?",
+      "answer": "Matthew 13:47-50",
+      "reference": "Matthew 13:47-50",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Rich Fool, describing a rich man who stores up earthly treasures but is not rich toward God?",
+      "answer": "Luke 12:13-21",
+      "reference": "Luke 12:13-21",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Wedding Banquet, comparing the kingdom of heaven to a wedding feast where many are invited but few are chosen?",
+      "answer": "Matthew 22:1-14",
+      "reference": "Matthew 22:1-14",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Wise and Foolish Builders, featuring a wise and foolish builder, and emphasizing the importance of building one's life on Jesus' teachings?",
+      "answer": "Matthew 7:24-27",
+      "reference": "Matthew 7:24-27",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Pearl of Great Price, involving a man finding a pearl of great value and selling all he has to buy it?",
+      "answer": "Matthew 13:45-46",
+      "reference": "Matthew 13:45-46",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Ten Virgins, in which Jesus talks about ten virgins waiting for the bridegroom, emphasizing the importance of being prepared?",
+      "answer": "Matthew 25:1-13",
+      "reference": "Matthew 25:1-13",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Pharisee and the Tax Collector, highlighting the importance of humility through the prayers of a tax collector and a Pharisee?",
+      "answer": "Luke 18:9-14",
+      "reference": "Luke 18:9-14",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Workers in the Vineyard, describing a landowner hiring laborers at different times of the day, yet paying them all the same wage?",
+      "answer": "Matthew 20:1-16",
+      "reference": "Matthew 20:1-16",
+      "weight": 3
+    },
+    {
+      "question": "Where is the Parable of the Weeds, in which Jesus teaches about a farmer sowing good seed in his field, only to have an enemy sow weeds among the wheat?",
+      "answer": "Matthew 13:24-30",
+      "reference": "Matthew 13:24-30",
+      "weight": 3
+    }
+  ]
+}

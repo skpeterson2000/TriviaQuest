@@ -1,20 +1,24 @@
 import tkinter as tk
-from game_logic import TriviaGame
-from utilities import load_settings
-#from help_page import HelpPage  # Import HelpPage for navigation
+import random
+import json
+from tkinter import font
+from utilities import load_settings, create_button
 
-# Load settings from settings.json
+# Add src to Python path for imports
+import sys
+sys.path.append('/home/pi/Prepared4Eternity/src')
+
+from game_logic import TriviaGame
+from help_page import open_help_page
+from leaderboard import LeaderboardPage
+
+# Load settings from the correct path
 settings = load_settings("config/settings.json")
 
-def create_button(parent, text, command, bg_color, active_color):
-    button = tk.Button(parent, text=text, command=command, bg=bg_color, fg="white", activebackground=active_color, activeforeground="black")
-    button.pack(side=tk.LEFT, padx=10)
-    button.bind("<Enter>", lambda e: button.config(bg=active_color))
-    button.bind("<Leave>", lambda e: button.config(bg=bg_color))
-    
-    # Bind touchscreen events
-    button.bind("<ButtonPress-1>", lambda e: button.invoke())
-    button.bind("<ButtonRelease-1>", lambda e: button.invoke())
+# Load Psalm versions from JSON file
+psalm_versions_path = "/home/pi/Prepared4Eternity/data/psalm_119_11_versions.json"
+with open(psalm_versions_path, "r") as file:
+    psalm_119_11_versions = json.load(file)
 
 class HomePage:
     def __init__(self, root):
@@ -23,40 +27,39 @@ class HomePage:
         self.root.geometry(settings["window_size"])
         self.root.configure(bg=settings["background_color"])
 
-        welcome_label = tk.Label(root, text=settings["home_text"], font=("Arial_Black", 24), bg=settings["background_color"], fg="gold")
+        welcome_label = tk.Label(root, text=settings["home_banner"], font=("Arial_Black", 24), bg=settings["background_color"], fg="gold")
         welcome_label.pack()
 
-        text2_label = tk.Label(root, text="Prepared 4 \u221e - Home - ", wraplength=950, justify="left", font=("Arial", 14), bg=settings["background_color"], fg="gold")
+        text2_label = tk.Label(root, text=settings["home_text"], wraplength=950, justify="left", font=("Arial", 14), bg=settings["background_color"], fg="#10b9fb")
         text2_label.pack(pady=10)
 
-        psalm_label = tk.Label(root, text="                 Psalm 119:11\n I have hidden your word in my heart, that I might not sin against you. (NLT)", justify="left", wraplength=950, font=("Arial_Black", 18), bg=settings["background_color"], fg="gold")
-        psalm_label.pack(pady=10)
+        self.psalm_label = tk.Label(root, text="", justify="left", wraplength=950, font=("Arial_Black", 20), bg=settings["background_color"], fg="#ebeb71")
+        self.psalm_label.pack(pady=10)
 
-        text3_label = tk.Label(root, text="This game is intended to be played in a group setting over a local network, but can also be played solitaire. Details on how to play, how to set up the game for a group setting can be found by clicking the Help/Tutorial section below.", wraplength=950, justify="left", font=("Arial", 14), bg=settings["background_color"], fg="gold")
+        self.scroll_psalm_119_11_versions()
+
+        text3_label = tk.Label(root, text=settings["invite_text"], font=("Arial", 14), wraplength=950, justify="left", bg=settings["background_color"], fg="#10b9fb")
         text3_label.pack(pady=10)
 
-        intro_text = tk.Label(root, text=settings["intro_text"], font=("Arial", 14), bg=settings["background_color"], fg="gold")
+        intro_text = tk.Label(root, text=settings["vision_text"], font=("Arial", 16), bg=settings["background_color"], fg="#e44111")
         intro_text.pack(pady=10)
 
         button_frame = tk.Frame(root, bg=settings["background_color"])
         button_frame.pack(pady=15, expand=True)
 
-        # First row of buttons
-        row1 = tk.Frame(button_frame, bg=settings["background_color"])
-        row1.pack(pady=5)
+        create_button(button_frame, "Start Game", self.start_game, "#107b21", "#06e301")
+        create_button(button_frame, "Leaderboard", self.show_leaderboard, "#817808", "#f6c909")
+        create_button(button_frame, "Settings", self.open_settings, "#6c5400", "#ff8c00")
+        create_button(button_frame, "Help/Tutorial", self.open_help, "#5e0e89", "#b654e9")
+        create_button(button_frame, "Credits/About", self.show_credits, "#3c4056", "#c4cca6")
+        create_button(button_frame, "Categories", self.show_categories, "#007ba7", "#00bfff")
+        create_button(button_frame, "Exit", self.exit_app, "#8e0000", "#ff1c1c")
 
-        create_button(row1, "Start Game", self.start_game, "#107b21", "#06e301")
-        create_button(row1, "Leaderboard", self.show_leaderboard, "#817808", "#f6c909")
-        create_button(row1, "Settings", self.open_settings, "#6c5400", "#ff8c00")
-        create_button(row1, "Help/Tutorial", self.open_help, "#5e0e89", "#b654e9")
-
-        # Second row of buttons
-        row2 = tk.Frame(button_frame, bg=settings["background_color"])
-        row2.pack(pady=15)
-
-        create_button(row2, "Credits/About", self.show_credits, "#3c4056", "#c4cca6")
-        create_button(row2, "Categories", self.show_categories, "#007ba7", "#00bfff")  # New Categories button
-        create_button(row2, "Exit", self.exit_app, "#8e0000", "#ff1c1c")
+    def scroll_psalm_119_11_versions(self):
+        version = random.choice(psalm_119_11_versions)
+        display_text = f"Psalm 119:11 {version['text']}\t\t{version['translation']}"
+        self.psalm_label.config(text=display_text)
+        self.root.after(52000, self.scroll_psalm_119_11_versions)
 
     def start_game(self):
         self.root.destroy()
@@ -65,12 +68,8 @@ class HomePage:
         game_window.mainloop()
 
     def show_leaderboard(self):
-        leaderboard_window = tk.Toplevel(self.root)
-        leaderboard_window.title("Leaderboard")
-        leaderboard_window.geometry(settings["window_size"])
-        leaderboard_window.configure(bg=settings["background_color"])
-        lbl = tk.Label(leaderboard_window, text="Leaderboard coming soon!", bg=settings["background_color"], fg="white", font=("Arial", 24))
-        lbl.pack(pady=50)
+        leaderboard_page = LeaderboardPage(self.root, settings)
+        leaderboard_page.show_leaderboard()
 
     def open_settings(self):
         settings_window = tk.Toplevel(self.root)
@@ -81,8 +80,7 @@ class HomePage:
         lbl.pack(pady=50)
 
     def open_help(self):
-        help_window = tk.Toplevel(self.root)
-        help_page = HelpPage(help_window)  # Initialize HelpPage
+        open_help_page(self.root)
 
     def show_credits(self):
         credits_window = tk.Toplevel(self.root)
@@ -101,9 +99,12 @@ class HomePage:
         lbl.pack(pady=50)
 
     def exit_app(self):
-        self.root.destroy()
+        self.root.quit()
 
-if __name__ == "__main__":
+def main():
     root = tk.Tk()
     home = HomePage(root)
     root.mainloop()
+
+if __name__ == "__main__":
+    main()

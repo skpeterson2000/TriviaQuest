@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "question": "In which verse does Jesus refer to Himself as the 'Bread of Life'?",
+      "answer": "John 6:35",
+      "reference": "John 6:35",
+      "weight": 3
+    },
+    {
+      "question": "Where does Jesus call Himself the 'Light of the World'?",
+      "answer": "John 8:12",
+      "reference": "John 8:12",
+      "weight": 3
+    },
+    {
+      "question": "Which Scripture records Jesus saying, 'I am the Good Shepherd'?",
+      "answer": "John 10:11",
+      "reference": "John 10:11",
+      "weight": 3
+    },
+    {
+      "question": "Where does Jesus declare, 'I am the Resurrection and the Life'?",
+      "answer": "John 11:25",
+      "reference": "John 11:25",
+      "weight": 3
+    },
+    {
+      "question": "In which passage does Jesus describe Himself as 'The Way, the Truth, and the Life'?",
+      "answer": "John 14:6",
+      "reference": "John 14:6",
+      "weight": 3
+    },
+    {
+      "question": "Where does Jesus refer to Himself as 'The True Vine'?",
+      "answer": "John 15:1",
+      "reference": "John 15:1",
+      "weight": 3
+    },
+    {
+      "question": "Which verse calls Jesus 'The Lamb of God'?",
+      "answer": "John 1:29",
+      "reference": "John 1:29",
+      "weight": 2
+    },
+    {
+      "question": "Where is Jesus referred to as 'The King of the Jews'?",
+      "answer": "Matthew 27:11",
+      "reference": "Matthew 27:11",
+      "weight": 2
+    },
+    {
+      "question": "Which Scripture contains Jesus' statement, 'I am the Alpha and the Omega'?",
+      "answer": "Revelation 22:13",
+      "reference": "Revelation 22:13",
+      "weight": 2
+    },
+    {
+      "question": "In which verse does Jesus refer to Himself as 'The Son of God'?",
+      "answer": "John 3:16",
+      "reference": "John 3:16",
+      "weight": 3
+    },
+    {
+      "question": "Where is Jesus called 'Emmanuel'?",
+      "answer": "Matthew 1:23",
+      "reference": "Matthew 1:23",
+      "weight": 2
+    },
+    {
+      "question": "Which passage records Jesus saying, 'I am the Light of the World'?",
+      "answer": "John 8:12",
+      "reference": "John 8:12",
+      "weight": 3
+    }
+  ]
+}

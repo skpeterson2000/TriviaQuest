@@ -1,0 +1,36 @@
+{
+    "category": "Romans Road",
+    "level": 1,
+    "questions": [
+        {
+            "question": "What is our universal condition according to Romans 3:23?",
+            "answer": "For all have sinned and fall short of the glory of God.",
+            "reference": "Romans 3:23",
+            "weight": 1
+        },
+        {
+            "question": "What is the consequence of sin mentioned in Romans 6:23?",
+            "answer": "For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.",
+            "reference": "Romans 6:23",
+            "weight": 1
+        },
+        {
+            "question": "How does God's love manifest according to Romans 5:8?",
+            "answer": "But God demonstrates His own love for us in this: While we were still sinners, Christ died for us.",
+            "reference": "Romans 5:8",
+            "weight": 1
+        },
+        {
+            "question": "What does Romans 10:9 say about confessing Jesus as Lord?",
+            "answer": "If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved.",
+            "reference": "Romans 10:9",
+            "weight": 1
+        },
+        {
+            "question": "What does Romans 10:13 say about calling on the name of the Lord?",
+            "answer": "Everyone who calls on the name of the Lord will be saved.",
+            "reference": "Romans 10:13",
+            "weight": 1
+        }
+    ]
+}
