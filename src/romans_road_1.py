@@ -1,8 +1,15 @@
+import os
 import tkinter as tk
 import random
 import json
 from tkinter import simpledialog
 import time
+from leaderboard import LeaderboardPage
+
+def load_settings(settings_path):
+    with open(settings_path, 'r') as file:
+        settings = json.load(file)
+    return settings
 
 class TriviaGame:
     def __init__(self, root):
@@ -11,6 +18,7 @@ class TriviaGame:
         self.load_questions()
         self.question_index = 0
         self.score = 0
+        self.tokens = 0
         self.start_time = time.time()
 
         # Frame for content
@@ -40,11 +48,19 @@ class TriviaGame:
         self.exit_button = tk.Button(self.content_frame, text="Exit Game", command=self.root.quit, font=("Arial", 14))
         self.exit_button.pack(pady=10)
 
+        # Load settings
+        settings_path = '/home/pi/Prepared4Eternity/config/settings.json'
+        settings = load_settings(settings_path)
+
+        self.leaderboard = LeaderboardPage(self.root, settings)
+
         self.load_question()
 
     def load_questions(self):
-        with open('romans_road_l1.json', 'r') as file:
-            self.questions = json.load(file)["Romans Road"]
+        json_path = '/home/pi/Prepared4Eternity/src/data/romans_road_l1.json'
+        print(f"Attempting to open JSON file at: {json_path}")
+        with open(json_path, 'r') as file:
+            self.questions = json.load(file)["questions"]
 
     def load_question(self):
         self.answer_var.set("")
@@ -54,11 +70,11 @@ class TriviaGame:
             current_question = self.questions[self.question_index]
             self.question_label.config(text=current_question["question"])
 
-            answers = [current_question["answer"]]
-            while len(answers) < 4:
-                wrong_answer = random.choice([q["answer"] for q in self.questions])
-                if wrong_answer not in answers:
-                    answers.append(wrong_answer)
+            all_answers = [q["answer"] for q in self.questions]
+            all_answers = list(set(all_answers) - {current_question["answer"]})
+
+            wrong_answers = random.sample(all_answers, 3)
+            answers = [current_question["answer"]] + wrong_answers
             random.shuffle(answers)
 
             for i, button in enumerate(self.option_buttons):
@@ -102,26 +118,27 @@ class TriviaGame:
             button.pack_forget()
         self.check_answer_button.pack_forget()
         self.feedback_label.config(text=f"Final Score: {round(self.score, 2)}\nTotal Time: {total_time} seconds")
-        self.save_score(total_time)
+        name = simpledialog.askstring("Name", "Please enter your name:")
+        
+        # Save the score to the leaderboard
+        leaderboard_data = {
+            "name": name,
+            "score": round(self.score, 2),
+            "time": total_time
+        }
+        with open('/home/pi/Prepared4Eternity/src/data/leaderboard.json', 'r') as file:
+            leaderboard = json.load(file)
+        leaderboard.append(leaderboard_data)
+        with open('/home/pi/Prepared4Eternity/src/data/leaderboard.json', 'w') as file:
+            json.dump(leaderboard, file)
+        
+        # Check for token award
+        if self.score >= 5:
+            self.tokens += 1
+            print(f"Congratulations! You've earned a token. Total tokens: {self.tokens}")
 
-        # Clear the content frame for the leaderboard
-        for widget in self.content_frame.winfo_children():
-            widget.pack_forget()
-
-        # Load existing scores
-        try:
-            with open('leaderboard.json', 'r') as file:
-                leaderboard = json.load(file)
-        except FileNotFoundError:
-            leaderboard = []
-
-        # Display the leaderboard
-        leaderboard_label = tk.Label(self.content_frame, text="Top Scores", font=("Arial", 16), bg='white', wraplength=950)
-        leaderboard_label.pack(pady=10)
-
-        for entry in leaderboard:
-            entry_label = tk.Label(self.content_frame, text=f"{entry['name']}: {entry['score']} (Time: {entry.get('time', 'N/A')} seconds)", font=("Arial", 14), bg='white', wraplength=950)
-            entry_label.pack()
+        # Display the updated leaderboard
+        self.leaderboard.show_leaderboard()
 
         # Restart button
         restart_button = tk.Button(self.content_frame, text="Restart Game", command=self.restart_game, font=("Arial", 14))
@@ -130,19 +147,6 @@ class TriviaGame:
         # Exit button
         exit_button = tk.Button(self.content_frame, text="Exit Game", command=self.root.quit, font=("Arial", 14))
         exit_button.pack(pady=10)
-
-    def save_score(self, total_time):
-        try:
-            with open('leaderboard.json', 'r') as file:
-                leaderboard = json.load(file)
-        except FileNotFoundError:
-            leaderboard = []
-
-        name = simpledialog.askstring("Name", "Please enter your name:")
-        leaderboard.append({"name": name, "score": round(self.score, 2), "time": total_time})
-        
-        with open('leaderboard.json', 'w') as file:
-            json.dump(leaderboard, file)
 
     def restart_game(self):
         self.question_index = 0
@@ -157,4 +161,3 @@ def create_game():
 
 if __name__ == "__main__":
     create_game()
-    
