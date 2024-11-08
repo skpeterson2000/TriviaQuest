@@ -1,0 +1,20 @@
+{
+    "window_size": "1024x600",
+    "title": "Prepared 4 Eternity",
+    "background_color": "#11137e",
+    "font": {
+        "family": "Arial",
+        "size": 14,
+        "color": "white"
+    },
+    "button": {
+        "bg_color": "#1c9431",
+        "fg_color": "white",
+        "hover_bg_color": "#16dc4c",
+        "hover_fg_color": "black"
+    },
+    "welcome_text": "Welcome to Prepared for ∞!",
+    "intro_text": "Prepare yourself for an exciting journey...",
+    "home_text": "Prepared 4 \u221E Home"
+}
+
